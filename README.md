@@ -2,4 +2,5 @@
 
 #### functions and classes in python
 
-1. drawing shapes
+1. drawing shapes using Turtle class
+2. use class to send text using twilio

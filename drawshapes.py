@@ -20,21 +20,25 @@ def draw_shape():
     anna = turtle.Turtle()
     anna.shape('turtle')
     anna.color('yellow')
-    anna.speed(1)
+    anna.speed(10)
     draw_square(anna)
+    anna.right(10)
+    for i in range(1, 45):
+        draw_square(anna)
+        anna.right(8)
 
 # draw circle
-    levi = turtle.Turtle()
-    levi.shape('arrow')
-    levi.color('orange')
-    levi.circle(100)
+    # levi = turtle.Turtle()
+    # levi.shape('arrow')
+    # levi.color('orange')
+    # levi.circle(100)
 
     # draw triangle
-    kobe = turtle.Turtle()
-    kobe.shape('turtle')
-    kobe.color('magenta')
-    kobe.speed(1)
-    draw_triangle(kobe)
+    # kobe = turtle.Turtle()
+    # kobe.shape('turtle')
+    # kobe.color('magenta')
+    # kobe.speed(1)
+    # draw_triangle(kobe)
 
     window.exitonclick()
 

@@ -1,15 +1,12 @@
-from twilio import rest
+week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
+count = 0
+for item in week_temps_f:
+    count = item + 1
 
-# Your Account SID from twilio.com/console
-account_sid = "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-# Your Auth Token from twilio.com/console
-auth_token = "your_auth_token"
+new_week_temps_f = week_temps_f.split(",")
+sum = 0
 
-client = rest.Client(account_sid, auth_token)
+for temp in new_week_temps_f:
+    sum = sum + int(temp)
 
-message = client.messages.create(
-    to="+15558675309",
-    from_="+15017250604",
-    body="Hello from Python!")
-
-print(message.sid)
+avg_temp = sum / count

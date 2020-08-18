@@ -1,3 +1,4 @@
+import turtle
 week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
 
 new_week_temps_f = week_temps_f.split(",")
@@ -11,7 +12,6 @@ print(avg_temp)
 
 # nums = list(range(0,50))
 # print(nums)
-import turtle
 
 anna = turtle.Turtle()
 anna.color('orange')
@@ -71,7 +71,8 @@ kobe.color('green')
 #         num_words += 1
 # print(num_words)
 
-words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "wish"]
+words = ["adopt", "bake", "beam", "confide",
+         "grill", "plant", "time", "wave", "wish"]
 
 # past_tense = []
 #
@@ -95,66 +96,68 @@ words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "
 #         num_rainy_months += 1
 # print(num_rainy_months)
 #
-# sentence = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
-#
-# sentence_list = sentence.split()
-#
-# # Write your code here.
-#
-# same_letter_count = 0
-#
-# for word in sentence_list:
-#     if word[0] == word[-1]:
-#         print(word)
-#         same_letter_count += 1
-# print(same_letter_count)
-# #
-# items = ["whirring", "wow!", "calendar", "wry", "glass", "", "llama","tumultuous","owing"]
-#
-# acc_num = 0
-#
-# for item in items:
-#     if "w" in item:
-#         acc_num += 1
-# print
-#
-# sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
-#
-# new_sentence = sentence.split()
-# print(new_sentence)
-# num_a_or_e = 0
-#
-# for word in new_sentence:
-#     if ("a" in word) or ("e" in word) or ( "a" and "e" in word):
-#         num_a_or_e += 1
-# print(num_a_or_e)
+sentence1 = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
 
-# s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
-# vowels = ['a','e','i','o','u']
-#
-# # Write your code here.
-# num_vowels = 0
-# for vowel in s:
-#     if vowel in vowels:
-#         num_vowels += 1
-#
-# print(num_vowels)
+sentence_list = sentence1.split()
+
+# Write your code here.
+
+same_letter_count = 0
+
+for word in sentence_list:
+    if word[0] == word[-1]:
+        print(word)
+        same_letter_count += 1
+print(same_letter_count)
+# #
+items = ["whirring", "wow!", "calendar", "wry",
+         "glass", "", "llama", "tumultuous", "owing"]
+
+acc_num = 0
+
+for item in items:
+    if "w" in item:
+        acc_num += 1
+print(acc_num)
+
+sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
+
+new_sentence = sentence.split()
+print(new_sentence)
+num_a_or_e = 0
+
+for word in new_sentence:
+    if ("a" in word) or ("e" in word) or ("a" and "e" in word):
+        num_a_or_e += 1
+print(num_a_or_e)
+
+s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+# Write your code here.
+num_vowels = 0
+for vowel in s:
+    if vowel in vowels:
+        num_vowels += 1
+
+print(num_vowels)
 
 scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
-score=scores.split()
+score = scores.split()
 
 print(score)
 
-a_scores=0
+a_scores = 0
 
 for i in score:
-    if int(i)>=90:
-        a_scores=a_scores+1
+    if int(i) >= 90:
+        a_scores = a_scores+1
 
 print(a_scores)
 
-winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro',
+           'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
 
 sorted_list = sorted(winners)
 sorted_list.reverse()

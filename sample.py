@@ -1,18 +1,18 @@
 # import turtle
 # week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
-
+#
 # new_week_temps_f = week_temps_f.split(",")
 # sum = 0
 # for i in new_week_temps_f:
 #     sum += float(i)
-
+#
 # avg_temp = sum / len(new_week_temps_f)
 # print(sum)
 # print(avg_temp)
-
+#
 # # nums = list(range(0,50))
 # # print(nums)
-
+#
 # anna = turtle.Turtle()
 # anna.color('orange')
 # levi = turtle.Turtle()
@@ -60,7 +60,7 @@
 #
 #
 # print(resps)
-# avg_temp = sum / count
+#avg_temp = sum / count
 #
 # words = ["water", "chair", "pen", "basket", "hi", "car"]
 #
@@ -97,13 +97,13 @@ words = ["adopt", "bake", "beam", "confide",
 # print(num_rainy_months)
 #
 # sentence1 = "students flock to the arb for a variety of outdoor activities such as jogging and picnicking"
-
+#
 # sentence_list = sentence1.split()
 
-# # Write your code here.
+# Write your code here.
 
 # same_letter_count = 0
-
+#
 # for word in sentence_list:
 #     if word[0] == word[-1]:
 #         print(word)
@@ -112,95 +112,138 @@ words = ["adopt", "bake", "beam", "confide",
 # # #
 # items = ["whirring", "wow!", "calendar", "wry",
 #          "glass", "", "llama", "tumultuous", "owing"]
-
+#
 # acc_num = 0
-
+#
 # for item in items:
 #     if "w" in item:
 #         acc_num += 1
 # print(acc_num)
-
+#
 # sentence = "python is a high level general purpose programming language that can be applied to many different classes of problems."
-
+#
 # new_sentence = sentence.split()
 # print(new_sentence)
 # num_a_or_e = 0
-
+#
 # for word in new_sentence:
 #     if ("a" in word) or ("e" in word) or ("a" and "e" in word):
 #         num_a_or_e += 1
 # print(num_a_or_e)
-
+#
 # s = "singing in the rain and playing in the rain are two entirely different situations but both can be fun"
 # vowels = ['a', 'e', 'i', 'o', 'u']
 
-# # Write your code here.
+# Write your code here.
 # num_vowels = 0
 # for vowel in s:
 #     if vowel in vowels:
 #         num_vowels += 1
-
+#
 # print(num_vowels)
-
-
+#
+# scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
+#
+# score = scores.split()
+#
+# print(score)
+#
+# a_scores = 0
+#
+# for i in score:
+#     if int(i) >= 90:
+#         a_scores = a_scores+1
+#
+# print(a_scores)
+#
 # winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro',
 #            'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
-
+#
 # sorted_list = sorted(winners)
 # sorted_list.reverse()
 # reverse_list = sorted_list
-
+#
 # # z_winners = sorted.reverse()
-
+#
 # print(reverse_list)
 
-scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
 
-score = scores.split()
+# sports = ['cricket', 'football', 'volleyball', 'baseball', 'softball', 'track and field', 'curling', 'ping pong', 'hockey']
+#
+# sports.remove("cricket")
+#
+# print(sports)
 
-print(score)
+# winners = ['Alice Munro', 'Alvin E. Roth', 'Kazuo Ishiguro', 'Malala Yousafzai', 'Rainer Weiss', 'Youyou Tu']
+#
+#
+# winners.reverse()
+#
+# z_winners = winners
+# print(z_winners)
 
-a_scores = 0
+# alist = [4,2,8,6,5]
+# blist = [ ]
+# for item in alist:
+#    blist.append(item+5)
+# print(blist)
+# lst= [3,0,9,4,1,7]
+# new_list=[]
+# for i in range(len(lst)):
+#    new_list.append(lst[i]+5)
+# print(new_list)
 
-for i in score:
-    if int(i) >= 90:
-        a_scores = a_scores+1
+# verbs = ["kayak", "cry", "walk", "eat", "drink", "fly"]
+#
+# ing = []
+#
+# for word in verbs:
+#     ing.append(word + "ing")
+# print(ing)
+# numbs = [5, 10, 15, 20, 25]
+#
+# for i in numbs:
+#     num = i+5
+#     numbs.append(num)
+# del numbs[0:5]
+# print(numbs)
+#
+# wrds = ["end", 'work', "play", "start", "walk", "look", "open", "rain", "learn", "clean"]
+#
+# past_wrds = []
+#
+# for wrd in wrds:
+#     past_wrds.append(wrd + 'ed')
+#
+# print(past_wrds)
 
-print(a_scores)
+# scores = "67 80 90 78 93 20 79 89 96 97 92 88 79 68 58 90 98 100 79 74 83 88 80 86 85 70 90 100"
+# new_scores = scores.split()
 
-# stopwords = ['to', 'a', 'for', 'by', 'an',
-#              'am', 'the', 'so', 'it', 'and', "The"]
-# org = "The organization for health, safety, and education"
-# org_lst = org.split()
+# a_scores = 0
+#
+# for score in new_scores:
+#     if int(score) >= 90:
+#         a_score = a_scores+1
+#
+# print(a_score)
+#
+# fileref = open("sample.txt", 'r')
+# lines = fileref.readlines()
+#
+# # for line in lines[:4]:
+# #     print(line.strip())
+# print(len(lines))
 
-# acro = ''
+# file_write = open("sample.txt", "w")
+#
+# for num in range(10):
+#     square = num * num
+#     file_write.write(str(square))
+#     file_write.write('\n')
+# file_write.close()
 
-# for word in org_lst:
-#     if word not in stopwords:
-#         acro = acro + word[0].upper()
-# print(acro)
+with open("sample.txt", "r") as sample:
 
-# acro = ''
-
-# for word in org_lst:
-#     if word not in stopwords:
-# acro = acro + (word[0] + word[1]+". ").upper()
-# acro = acro + ". ".join(word[0:2].upper())
-# acro = '. '.join(word[:2].upper()
-#                  for word in org.split() if word not in stopwords)
-
-# print(acro)
-
-p_phrase = "was it a car or a cat I saw"
-list_p_phrase = p_phrase.split()
-
-list_p_phrase.reverse()
-print(list_p_phrase == p_phrase)
-
-inventory = ["shoes, 12, 29.99", "shirts, 20, 9.99",
-             "sweatpants, 25, 15.00", "scarves, 13, 7.75"]
-
-for item in inventory:
-    name, size, price = item.split(", ")
-
-    print("The store has {} {}, each for {} USD.".format(size, name, price))
+    for line in sample:
+        print(line)

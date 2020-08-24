@@ -243,7 +243,41 @@ words = ["adopt", "bake", "beam", "confide",
 #     file_write.write('\n')
 # file_write.close()
 
-with open("sample.txt", "r") as sample:
+# with open("sample.txt", "r") as sample:
+#
+#     for line in sample:
+#         print(line)
+# sample = open('sample.txt', "r").read()
+#
+# num = len(sample)
+# print(num)
 
-    for line in sample:
-        print(line)
+sample = open('sample.txt', "r").read()
+
+#words = sample.split()
+# num_words = 0
+#
+# for word in words:
+#     num_words += 1
+# print(num_words)
+
+# three = []
+#
+# for line in sample:
+#    line = line.split()
+#    print(line)
+#    three += [line[2]]
+
+# print(three)
+
+words = sample.split()
+p_words = []
+
+for word in words:
+    if "p" in word:
+        p_words.append(word)
+print(p_words)
+
+swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+
+swimmers['Phelps'] = swimmers['Phelps'] + 5

@@ -270,14 +270,136 @@ sample = open('sample.txt', "r").read()
 
 # print(three)
 
-words = sample.split()
-p_words = []
+# words = sample.split()
+# p_words = []
+#
+# for word in words:
+#     if "p" in word:
+#         p_words.append(word)
+# print(p_words)
+#
+# swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+#
+# swimmers['Phelps'] = swimmers['Phelps'] + 5
+#
+# a = 10
+#
+# def foo():
+#     a = a + 10
+# foo()
+# print(a)
+#
+# #Python3 level 2-week2
 
-for word in words:
-    if "p" in word:
-        p_words.append(word)
-print(p_words)
+# --1
+# Junior = {'SI 206':4, 'SI 310':4, 'BL 300':3, 'TO 313':3, 'BCOM 350':1, 'MO 300':3}
+# credits = 0
+# for v in Junior:
+#     credits = credits + Junior[v]
+# print(credits)
 
-swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+# --2
+# str1 = "peter piper picked a peck of pickled peppers"
+#
+# freq ={}
+#
+# for char in str1:
+#     if char not in freq:
+#         freq[char] = 0
+#     freq[char] = freq[char] + 1
 
-swimmers['Phelps'] = swimmers['Phelps'] + 5
+# --3
+# s1 = "hello"
+#
+# counts = {}
+#
+# for i in s1:
+#     if i not in counts:
+#         counts[i] = 0
+#     counts[i] = counts[i] + 1
+
+# --4
+# str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
+#
+# words = str1.split()
+#
+# freq_words = {}
+#
+# for word in words:
+#     if word not in freq_words:
+#         freq_words[word] = 0
+#     freq_words[word] = freq_words[word] + 1
+
+# --5
+# sent = "Singing in the rain and playing in the rain are two entirely different situations but both can be good"
+# words = sent.split()
+#
+# wrd_d = {}
+#
+# for word in words:
+#     if word not in wrd_d:
+#         wrd_d[word] = 0
+#     wrd_d[word] = wrd_d[word] + 1
+
+# --6
+# sally = "sally sells sea shells by the sea shore"
+#
+# characters = {}
+#
+# for char in sally:
+#     if char not in characters:
+#         characters[char] = 0
+#     characters[char] = characters[char] + 1
+#
+# keys = list(characters.keys())
+# best_char = keys[0]
+#
+# for key in keys:
+#     if characters[key] > characters[best_char]:
+#         best_char = key
+#--7
+
+# sally = "sally sells sea shells by the sea shore and by the road"
+#
+# characters = {}
+#
+# for i in sally:
+#     if i not in characters:
+#         characters[i] = 0
+#     characters[i] = characters[i] + 1
+#
+# keys = list(characters.keys())
+# worst_char = keys[0]
+#
+# for key in keys:
+#     if characters[key] < characters[worst_char]:
+#         worst_char = key
+#---8
+# string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+#
+# letter_counts = {}
+#
+# for letter in string1:
+#     letter = letter.lower()
+#     if letter not in letter_counts:
+#         letter_counts[letter] = 0
+#
+#     letter_counts[letter] = letter_counts[letter] + 1
+#--9
+# p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
+#
+# low_d = {}
+#
+# for char in p:
+#     char = char.lower()
+#     if char not in low_d:
+#         low_d[char] = 0
+#     low_d[char] = low_d[char] + 1
+# print(low_d)
+
+# using zip
+names = ["Peter","Clark","Wade", "Bruce"]
+heroes = ['Spiderman', 'Superman','Deadpool','Batrman']
+
+for name,hero in zip(names,heroes):
+    print(f'{name} is {hero}')

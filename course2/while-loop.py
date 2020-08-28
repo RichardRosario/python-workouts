@@ -44,32 +44,45 @@
 # print(theSum)
 
 
-def checkout():
-    total = 0
-    count = 0
-    moreItems = True
-    while moreItems:
-        price = float(input('Enter price of item (0 when done): '))
-        if price != 0:
-            count = count + 1
-            total = total + price
-            print('Subtotal: $', total)
-        elif price < 0:
-            print("no negatives please")
-        else:
-            moreItems = False
-    average = total / count
-    print('Total items:', count)
-    print('Total $', total)
-    print('Average price per item: $', round(average, 2))
+# def checkout():
+#     total = 0
+#     count = 0
+#     moreItems = True
+#     while moreItems:
+#         price = float(input('Enter price of item (0 when done): '))
+#         if price != 0:
+#             count = count + 1
+#             total = total + price
+#             print('Subtotal: $', total)
+#         elif price < 0:
+#             print("no negatives please")
+#         else:
+#             moreItems = False
+#     average = total / count
+#     print('Total items:', count)
+#     print('Total $', total)
+#     print('Average price per item: $', round(average, 2))
 
 
-checkout()
+# checkout()
 
 # sample of an infinite loop
-b = 15
+# b = 15
 
-while b < 60:
-    b = 5
-    print("Bugs")
-    b = b + 7
+# while b < 60:
+#     b = 5
+#     print("Bugs")
+# b = b + 7
+
+def sublist(lst):
+    sub = []
+    x = (num for num in lst)
+    num = next(x, 5)
+    while num != 5:
+        sub.append(num)
+        num = next(x, 5)
+    return sub
+
+
+lst = [1, 3, 4, 5, 6, 7, 3]
+print(sublist(lst))

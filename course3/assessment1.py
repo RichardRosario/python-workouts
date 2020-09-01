@@ -122,5 +122,20 @@ for lst in athletes:
             t.append(name)
         else:
             other.append(name)
-print(t)
-print(other)
+# print(t)
+# print(other)
+
+week_temps_f = "75.1,77.7,83.2,82.5,81.0,79.5,85.7"
+
+lst_temps = week_temps_f.split(",")
+print(lst_temps)
+
+sum = 0
+avg_temp = 0
+for num in lst_temps:
+    num = float(num)
+    print(type(num))
+    sum = sum + num
+print(sum)
+avg_temp = sum / len(lst_temps)
+print(avg_temp)

@@ -22,10 +22,10 @@ lst_check = ['plums', 'watermelon', 'kiwi', 'strawberries',
 
 filter_testing = filter(lambda elem: 'w' in elem, lst_check)
 
-print(list(filter_testing))
+# print(list(filter_testing))
 
 # =============
 lst = ["witch", "halloween", "pumpkin", "cat", "candy", "wagon", "moon"]
 lst2 = filter(lambda word: 'o' in word, lst)
 
-print(list(lst2))
+# print(list(lst2))

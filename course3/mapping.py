@@ -10,7 +10,10 @@ def tripleStuff(a_list):
 
 
 def quadrupleStuff(a_list):
-    new_seq = map(lambda value: 4*value, a_list)
+ # map method
+    # new_seq = map(lambda value: 4*value, a_list)
+    # list comprehension method
+    new_seq = [value * 4 for value in a_list]
     return list(new_seq)
 
 
@@ -18,7 +21,7 @@ things = [2, 5, 9]
 things3 = tripleStuff(things)
 # print(things3)
 things4 = quadrupleStuff(things)
-# print(things4)
+print(things4)
 
 # more map
 things = [2, 5, 9]

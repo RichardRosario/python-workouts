@@ -33,3 +33,17 @@ print("---first item in the list---")
 print(x[0])
 print("---the whole list, pretty printed---")
 print(json.dumps(x, indent=2))  # pretty print the results
+
+# ====================
+
+
+def requestURL(baseurl, params={}):
+    # This function accepts a URL path and a params diction as inputs.
+    # It calls requests.get() with those inputs,
+    # and returns the full URL of the data you want to get.
+    req = requests.Request(method='GET', url=baseurl, params=params)
+    prepped = req.prepare()
+    return prepped.url
+
+
+print(requestURL(some_base_url, some_params_dictionary))

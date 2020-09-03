@@ -53,9 +53,12 @@ for char in list(str1):
 #         for i, l in enumerate(f):
 #             pass
 #     return i + 1
-f = open('D:\python-workouts\workouts\course3\sample.txt.txt', 'r')
+
+# ===============
+f = open('D:\python-workouts\workouts\course3\sample.txt', 'r')
 
 line = f.readlines()
+
 sum = 0
 lst = []
 for lin in line[6:18]:

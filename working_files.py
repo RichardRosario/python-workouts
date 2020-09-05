@@ -38,7 +38,7 @@ for i in range(len(data)-1):
     # writer.writerow([todays_date, daily_return])
     formatted_date = todays_date.strftime('%m/%d/%Y')
     writer.writerow([formatted_date, daily_return])
-    print("Date: {}, Daily ROI: {}".format(formatted_date, daily_return))
+    # print("Date: {}, Daily ROI: {}".format(formatted_date, daily_return))
 
 
 # Write code to find out how many lines are in the file emotion_words.txt as shown above. Save this value to the variable num_lines. Do not use the len method.
@@ -47,3 +47,9 @@ for i in range(len(data)-1):
 # num_lines = sum(
 #     [1 for i in open("D:\python-workouts\workouts\course4\sample.txt", "r").readlines() if i.strip()])
 # print(num_lines)
+# find number of characters in a file
+f = open("D:\python-workouts\workouts\AAL_returns.csv", "r")
+
+data = f.read().replace(" ", "")
+num_chars = len(data)
+print("There are {} of characters in this file!".format(num_chars))

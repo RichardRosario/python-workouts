@@ -51,5 +51,33 @@ for i in range(len(data)-1):
 f = open("D:\python-workouts\workouts\AAL_returns.csv", "r")
 
 data = f.read().replace(" ", "")
+# print(data)
 num_chars = len(data)
-print("There are {} of characters in this file!".format(num_chars))
+# print("There are {} of characters in this file!".format(num_chars))
+
+
+line = open('SP500.txt', 'r').readlines()
+# print(line)
+
+sum = 0
+list = []
+
+for lin in line[6:18]:
+    lin = lin.split(',')
+
+    sum += float(lin[1])
+
+    list += [lin[5]]
+
+mean_SP = sum/12
+# print(mean_SP)
+
+interest = list[0]
+
+for i in range(len(list)):
+    if list[i] > interest:
+        interest = list[i]
+
+max_interest = float(interest)
+
+print(max_interest)

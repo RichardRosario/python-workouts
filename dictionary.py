@@ -63,7 +63,7 @@ for k in ks:
 
 # print(max_value)
 
-# check the number of items
+# check the number of items===========
 
 
 def count(nums):

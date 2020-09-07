@@ -71,3 +71,22 @@ def count(nums):
 
 
 print(count([1, 2, 3, 4, 4]))
+
+sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+words = sentence.split()
+word_counts = {}
+for word in words:
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
+
+
+# The dictionary Junior shows a schedule for a junior year semester. The key is the course name and the value is the number of credits. Find the total number of credits taken this semester and assign it to the variable credits. Do not hardcode this – use dictionary accumulation!
+Junior = {'SI 206': 4, 'SI 310': 4, 'BL 300': 3,
+          'TO 313': 3, 'BCOM 350': 1, 'MO 300': 3}
+credits = 0
+
+for value in Junior.values():
+    credits += value
+print(credits)

@@ -60,8 +60,7 @@ max_value = ks[0]
 for k in ks:
     if lett_d[k] > lett_d[max_value]:
         max_value = k
-
-# print(max_value)
+print(max_value)
 
 # check the number of items===========
 
@@ -70,7 +69,7 @@ def count(nums):
     return len(nums)
 
 
-print(count([1, 2, 3, 4, 4]))
+# print(count([1, 2, 3, 4, 4]))
 
 sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
 words = sentence.split()
@@ -89,4 +88,4 @@ credits = 0
 
 for value in Junior.values():
     credits += value
-print(credits)
+# print(credits)

@@ -36,5 +36,37 @@ def sum(y):
     return divide(y) + 6
 
 
-print(sum(4))
-print(divide(3))
+# print(sum(4))
+# print(divide(3))
+
+# ===== Below, we’ve provided a for loop that sums all the elements of list1. Write code that accomplishes the same task, but instead uses a while loop. Assign the accumulator variable to the name accum.
+list1 = [8, 3, 4, 5, 6, 7, 9]
+
+tot = 0
+for elem in list1:
+    tot = tot + elem
+
+i = 0
+accum = 0
+while i < len(list1):
+    accum = accum + list1[i]
+    i += 1
+# print(tot)
+# print(accum)
+
+# ===== Write a function called check_nums that takes a list as its parameter, and contains a while loop that only stops once the element of the list is the number 7. What is returned is a list of all of the numbers up until it reaches 7.
+
+
+def check_nums(nums):
+    new_nums = []
+    i = 0
+    while i < len(nums):
+        if nums[i] != 7:
+            break
+        new_nums.append(nums[i])
+        i += 1
+    return new_nums
+
+
+list = [1, 2, 3, 4, 7, 8, 9]
+print(check_nums(list))

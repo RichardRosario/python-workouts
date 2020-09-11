@@ -99,3 +99,31 @@ d = a-b
 e = a*b
 
 # print('{}\n{}\n{}'.format(a+b, a-b, a*b))
+# The provided code stub reads two integers,  and , from STDIN.
+# Add logic to print two lines. The first line should contain the result of integer division,  // . The second line should contain the result of float division,  / .
+# No rounding or formatting is necessary.
+a = 6
+b = 5
+c = a//b
+d = a/b
+# print('{}\n{}'.format(a//b, a/b))
+n = 3
+
+# for i in range(5):
+# print(i**2)
+
+# An extra day is added to the calendar almost every four years as February 29, and the day is called a leap day. It corrects the calendar for the fact that our planet takes approximately 365.25 days to orbit the sun. A leap year contains a leap day.
+
+# In the Gregorian calendar, three conditions are used to identify leap years:
+
+# The year can be evenly divided by 4, is a leap year, unless:
+# The year can be evenly divided by 100, it is NOT a leap year, unless:
+# The year is also evenly divisible by 400. Then it is a leap year.
+
+
+def is_leap(year):
+    leap = False
+    return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
+
+
+print(is_leap(2022))

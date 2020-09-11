@@ -147,6 +147,7 @@ n = 3
 # for i in range(1, n+1):
 #     print(f"{i}", end='')
 
-# ints = tuple(map(int, input().split()))
+ints = tuple(map(int, input().split()))
 # print(numpy.zeros(ints, dtype=numpy.int))
 # print(numpy.ones(ints, dtype=numpy.int))
+print(numpy.eye(ints, k=0))

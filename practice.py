@@ -1,3 +1,4 @@
+import numpy
 addition_str = "2+5+10+20"
 nums = addition_str.split("+")
 sum_val = 0
@@ -121,14 +122,31 @@ n = 3
 # The year is also evenly divisible by 400. Then it is a leap year.
 
 
-def is_leap(year):
-    leap = False
-    # wihtout if statement
-    # return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
-    # with if statement
-    if year % 4 == 0 and (year % 400 == 0 or year % 100 != 0):
-        leap = True
-    return leap
+# def is_leap(year):
+#     leap = False
+# wihtout if statement
+# return year % 4 == 0 and (year % 400 == 0 or year % 100 != 0)
+# with if statement
+# if year % 4 == 0 and (year % 400 == 0 or year % 100 != 0):
+#     leap = True
+# return leap
 
 
-print(is_leap(2022))
+# print(is_leap(2022))
+
+# Print the list of integers from  through  as a string, without spaces.
+# n = [i for i in range(5)]
+# for i in range(5):
+#     n.append(i)
+# print(n)
+# new_n = ''.join(str(i) for i in n)
+# print(new_n)
+# n = 3
+# # print(*range(1, int(input())+1), sep='')
+# # print(*range(1, int(input())+1), sep='')
+# for i in range(1, n+1):
+#     print(f"{i}", end='')
+
+ints = tuple(map(int, input().split(' ')))
+print(numpy.zeros(ints, dtype=numpy.int))
+print(numpy.ones(ints, dtype=numpy.int))

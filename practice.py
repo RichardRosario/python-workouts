@@ -69,4 +69,33 @@ def check_nums(nums):
 
 
 list = [1, 2, 3, 4, 7, 8, 9]
-print(check_nums(list))
+# print(check_nums(list))
+
+# for n in range(2, 5):
+#     if n % 2 == 0:
+#         print("Not Weird")
+#     elif n % 2 == 1:
+#         print('Weird')
+# for n in range(6, 20):
+#     if n % 2 == 0:
+#         print('Weird')
+#     elif n > 20:
+#         print('Not Weird')
+
+# n = int(input().strip())
+# check = {True: "Not Weird", False: "Weird"}
+
+# print(check[
+#     n % 2 == 0 and (
+#         n in range(2, 6) or
+#         n > 20)
+# ])
+
+
+a = 3
+b = 2
+c = a+b
+d = a-b
+e = a*b
+
+# print('{}\n{}\n{}'.format(a+b, a-b, a*b))

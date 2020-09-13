@@ -1,3 +1,4 @@
+# hackerrank problems and solutions
 import numpy
 addition_str = "2+5+10+20"
 nums = addition_str.split("+")
@@ -8,11 +9,11 @@ sum_val = 0
 # # print(sum_val)
 
 
-def adding(x):
-    y = 3
-    z = y + x + x
-    print(z)
-    return z
+# def adding(x):
+#     y = 3
+#     z = y + x + x
+#     print(z)
+#     return z
 
 
 # adding(4)
@@ -71,7 +72,7 @@ def check_nums(nums):
 
 list = [1, 2, 3, 4, 7, 8, 9]
 # print(check_nums(list))
-
+# =======================
 # for n in range(2, 5):
 #     if n % 2 == 0:
 #         print("Not Weird")
@@ -100,6 +101,7 @@ d = a-b
 e = a*b
 
 # print('{}\n{}\n{}'.format(a+b, a-b, a*b))
+# =================================
 # The provided code stub reads two integers,  and , from STDIN.
 # Add logic to print two lines. The first line should contain the result of integer division,  // . The second line should contain the result of float division,  / .
 # No rounding or formatting is necessary.
@@ -112,7 +114,7 @@ n = 3
 
 # for i in range(5):
 # print(i**2)
-
+# ================================
 # An extra day is added to the calendar almost every four years as February 29, and the day is called a leap day. It corrects the calendar for the fact that our planet takes approximately 365.25 days to orbit the sun. A leap year contains a leap day.
 
 # In the Gregorian calendar, three conditions are used to identify leap years:
@@ -133,7 +135,7 @@ n = 3
 
 
 # print(is_leap(2022))
-
+# ====================================
 # Print the list of integers from  through  as a string, without spaces.
 # n = [i for i in range(5)]
 # for i in range(5):
@@ -146,8 +148,30 @@ n = 3
 # # print(*range(1, int(input())+1), sep='')
 # for i in range(1, n+1):
 #     print(f"{i}", end='')
-
+# =============================
 ints = tuple(map(int, input().split()))
 # print(numpy.zeros(ints, dtype=numpy.int))
 # print(numpy.ones(ints, dtype=numpy.int))
-print(numpy.eye(ints, k=0))
+# print(numpy.eye(ints, k=0))
+# ============================
+# The first line contains two space separated integers,  and .
+# The next  lines contains  space separated integers of array .
+# The following  lines contains  space separated integers of array .
+# N, M = map(int, input().split())
+
+# A, B = (numpy.array([input().split()
+#                      for _ in range(N)], dtype=int) for _ in range(2))
+# print(A + B)
+# print(A - B)
+# print(A * B)
+# print(A / B)
+# print(A % B)
+# print(A ** B)
+# ===================
+# numpy.set_printoptions(sign=' ')
+
+# A = numpy.array(input().split(), float)
+
+# print(numpy.floor(A))
+# print(numpy.ceil(A))
+# print(numpy.rint(A))

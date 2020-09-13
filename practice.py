@@ -175,3 +175,14 @@ ints = tuple(map(int, input().split()))
 # print(numpy.floor(A))
 # print(numpy.ceil(A))
 # print(numpy.rint(A))
+# =================================
+# N, M = map(int, input().split())
+# my_array = numpy.array([input().split() for i in range(N)], int)
+
+# print(numpy.prod(numpy.sum(my_array, axis=0),axis=0))
+# ===================
+# N, M = map(int, input().split())
+
+# my_arr = numpy.array([input().split() for i in range(N)], int)
+
+# print(numpy.max(numpy.min(my_arr, axis=1)))

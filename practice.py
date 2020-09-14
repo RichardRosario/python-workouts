@@ -1,5 +1,6 @@
 # hackerrank problems and solutions
-from itertools import permutations
+from itertools import combinations_with_replacement, groupby
+from itertools import permutations, product, combinations
 import numpy
 
 # addition_str = "2+5+10+20"
@@ -209,20 +210,39 @@ import numpy
 # numpy.set_printoptions(legacy='1.13')
 # print(numpy.linalg.det(a))
 # You are given a two lists  and . Your task is to compute their cartesian product X.
-from itertools import product
+
 # using comprehension
-A = [int(x) for x in input().split()]
-B = [int(x) for x in input().split()]
-# using list and map
-a = list(map(int, input().split()))
-b = list(map(int, input().split()))
-print(*product(A, B))
+# A = [int(x) for x in input().split()]
+# B = [int(x) for x in input().split()]
+# # using list and map
+# a = list(map(int, input().split()))
+# b = list(map(int, input().split()))
+# print(*product(A, B))
 # print(*product(a, b))
 # ======================You are given a string .
 # Your task is to print all possible permutations of size  of the string in lexicographic sorted order.
-s, n = input().split()
+# s, n = input().split()
 
-perm = list(permutations(s, int(n)))
-perm.sort()
+# perm = list(permutations(s, int(n)))
+# perm.sort()
+# [print("".join(i)) for i in perm]
+# =========================
+# You are given a string S.
+# Your task is to print all possible combinations, up to size k, of the string in lexicographic sorted order.
+# S, k = input().split()
 
-[print("".join(i)) for i in perm]
+# for i in range(1, int(k)+1):
+#     for c in combinations(sorted(S), i):
+# print(''.join(c))
+
+# ===================You are given a string .
+# Your task is to print all possible size  replacement combinations of the string in lexicographic sorted order.
+# S, k = input().split()
+
+# comb = list(combinations_with_replacement(sorted(S), int(k)))
+# for c in comb:
+# print("".join(c))
+
+# =================
+# one liner
+# print(*[(len(list(c)), int(k)) for k, c in groupby(input())])

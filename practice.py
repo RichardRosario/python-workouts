@@ -1,4 +1,5 @@
 # hackerrank problems and solutions
+from itertools import permutations
 import numpy
 
 # addition_str = "2+5+10+20"
@@ -201,3 +202,27 @@ import numpy
 # A = numpy.array([input().split() for _ in range(N)], int)
 # B = numpy.array([input().split() for _ in range(N)], int)
 # print(numpy.dot(A, B))
+
+# ================== get the determinant
+# N= int(input())
+# a=numpy.array([input().split() for _ in range(N)],float)
+# numpy.set_printoptions(legacy='1.13')
+# print(numpy.linalg.det(a))
+# You are given a two lists  and . Your task is to compute their cartesian product X.
+from itertools import product
+# using comprehension
+A = [int(x) for x in input().split()]
+B = [int(x) for x in input().split()]
+# using list and map
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+print(*product(A, B))
+# print(*product(a, b))
+# ======================You are given a string .
+# Your task is to print all possible permutations of size  of the string in lexicographic sorted order.
+s, n = input().split()
+
+perm = list(permutations(s, int(n)))
+perm.sort()
+
+[print("".join(i)) for i in perm]

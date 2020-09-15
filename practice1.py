@@ -1,3 +1,4 @@
+import re
 import numpy
 
 # hackerrank problems and solutions
@@ -14,16 +15,16 @@ import numpy
 
 from itertools import combinations, product
 
-N = int(input())
-S = input().split()
-K = int(input())
+# N = int(input())
+# S = input().split()
+# K = int(input())
 
-num = 0
-den = 0
+# num = 0
+# den = 0
 
-for c in combinations(S, K):
-    den += 1
-    num += 'a' in c
+# for c in combinations(S, K):
+#     den += 1
+#     num += 'a' in c
 
 # print(float(num)/den)
 
@@ -33,9 +34,19 @@ for c in combinations(S, K):
 # The first line contains 2 space separated integers K and M.
 # The next  lines each contains an integer N, denoting the number of elements in the  list, followed by  space separated integers denoting the elements in the list.
 K, M = map(int, input().split())
-#N = (list(map(int, input().split())) for _ in range(1, K))
-N = (list(map(int, input().split()))[1:] for _ in range(K))
+# N = (list(map(int, input().split())) for _ in range(1, K)) -- first option
+# N = (list(map(int, input().split()))[1:] for _ in range(K)) -- best option
 
-results = map(lambda x: sum(i**2 for i in x) % M, product(*N))
+# results = map(lambda x: sum(i**2 for i in x) % M, product(*N))
+
+# version 2
+print(max(sum(j) % M for j in product(
+    *((int(i) ** 2 for i in input().split()[1:]) for _ in range(K)))))
 
 # print(max(results))
+
+# ==================
+# v = "aeiou"
+# c = "qwrtypsdfghjklzxcvbnm"
+# print(*re.findall("(?=[%s]([%s]{2,})[%s])" %
+#                   (c, v, c), input(), re.I) or [-1], sep="\n")

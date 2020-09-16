@@ -60,3 +60,11 @@ from itertools import combinations, product
 #             for i in re.finditer(r'(?={})'.format(k), s)], sep='\n')
 # else:
 #     print('(-1, -1)')
+
+# =====================
+# import re
+# N = int(input())
+
+# for i in range(N):
+#     print(re.sub(r'(?<= )(&&|\|\|)(?= )',
+#                  lambda x: 'and' if x.group() == '&&' else 'or', input()))

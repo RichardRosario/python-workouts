@@ -68,3 +68,28 @@ from itertools import combinations, product
 # for i in range(N):
 #     print(re.sub(r'(?<= )(&&|\|\|)(?= )',
 #                  lambda x: 'and' if x.group() == '&&' else 'or', input()))
+# ====================
+# thou = "(?:(M){0,3})?"
+# hun = "(?:(D?(C){0,3})|(CM)|(CD))?"
+# ten = "(?:(L?(X){0,3})|(XC)|(XL))?"
+# unit = "(?:(V?(I){0,3})|(IX)|(IV))?"
+
+# regex_pattern = r"^" + thou + hun + ten + unit + "$"
+
+# print(str(bool(re.match(regex_pattern, input()))))
+# ================================ regex to check mobile phone
+
+# for _ in range(int(input())):
+#     if re.match(r'[789]\d{9}$', input()):
+#         print('YES')
+#     else:
+#         print('NO')
+# ====================  Given  pairs of names and email addresses as input, print each name and email address pair having a valid email address on a new line.
+
+# import email.utils
+# N = input()
+# for _ in range(int(N)):
+#     email_inpt = email.utils.parseaddr(input())
+
+#     if bool(re.match('[a-zA-Z](\w|-|\.)*@[a-zA-Z]*\.[a-zA-Z]{0,3}$', email_inpt[1])):
+#         print(email.utils.formataddr(email_inpt))

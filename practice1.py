@@ -94,9 +94,63 @@ from itertools import combinations, product
 #     if bool(re.match('[a-zA-Z](\w|-|\.)*@[a-zA-Z]*\.[a-zA-Z]{0,3}$', email_inpt[1])):
 #         print(email.utils.formataddr(email_inpt))
 # =======================
-N = input()
-for i in range(0, N):
-    matches = re.findall(
-        r"(#(?:[\da-f]{3}){1,2})(?!\w)(?=.*;)", input(), re.IGNORECASE)
-    for m in matches:
-        print(m)
+# N = input()
+# for i in range(0, N):
+#     matches = re.findall(
+#         r"(#(?:[\da-f]{3}){1,2})(?!\w)(?=.*;)", input(), re.IGNORECASE)
+#     for m in matches:
+#         print(m)
+
+# ========================You are given an HTML code snippet of  lines.
+# Your task is to print start tags, end tags and empty tags separately.
+# You are given an HTML code snippet of  lines.
+# Your task is to print start tags, end tags and empty tags separately.
+
+from html.parser import HTMLParser
+
+
+# class MyHTMLParser(HTMLParser):
+#     def handle_starttag(self, tag, attrs):
+#         print('Start :', tag)
+#         for ele in attrs:
+#             print('->', ele[0], '>', ele[1])
+
+#     def handle_endtag(self, tag):
+#         print('End   :', tag)
+
+#     def handle_startendtag(self, tag, attrs):
+#         print('Empty :', tag)
+#         for ele in attrs:
+#             print('->', ele[0], '>', ele[1])
+
+
+# N = input()
+# parser = MyHTMLParser()
+# for _ in range(int(N)):
+#     parser.feed(input())
+
+
+class CustomHTMLParser(HTMLParser):
+    def handle_comment(self, data):
+        number_of_line = len(data.split('\n'))
+        if number_of_line > 1:
+            print('>>> Multi-line Comment')
+        else:
+            print('>>> Single-line Comment')
+        if data.strip():
+            print(data)
+
+    def handle_data(self, data):
+        if data.strip():
+            print(">>> Data")
+            print(data)
+N= input()
+parser = CustomHTMLParser()
+# set initial value of html string
+html_str = ''
+# loop through the input
+for _ in range(int(N)):
+    html_str += input().rstrip()+'\n'
+
+parser.feed(html_str)
+parser.close()

@@ -93,3 +93,10 @@ from itertools import combinations, product
 
 #     if bool(re.match('[a-zA-Z](\w|-|\.)*@[a-zA-Z]*\.[a-zA-Z]{0,3}$', email_inpt[1])):
 #         print(email.utils.formataddr(email_inpt))
+# =======================
+N = input()
+for i in range(0, N):
+    matches = re.findall(
+        r"(#(?:[\da-f]{3}){1,2})(?!\w)(?=.*;)", input(), re.IGNORECASE)
+    for m in matches:
+        print(m)

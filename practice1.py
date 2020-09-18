@@ -201,7 +201,7 @@ from html.parser import HTMLParser
 # [a-zA-Z0-9]{10} checks exactly 10 alphanumeric characters.
 
 # ================================
-# You and Fredrick are good friends. Yesterday, Fredrick received  credit cards from ABCD Bank. He wants to verify whether his credit card numbers are valid or not. You happen to be great at regex so he is asking for your help!
+# Checking a valid credit card. You want to verify whether credit card numbers are valid or not.
 
 # A valid credit card from ABCD Bank has the following characteristics:
 
@@ -211,7 +211,7 @@ from html.parser import HTMLParser
 # ► It may have digits in groups of , separated by one hyphen "-".
 # ► It must NOT use any other separator like ' ' , '_', etc.
 # ► It must NOT have  or more consecutive repeated digits.
-cc_test = re.compile(
+cc_check = re.compile(
     r"^"
     r"(?!.*(\d)(-?\1){3})"
     r"[456]"
@@ -220,7 +220,7 @@ cc_test = re.compile(
     r"$")
 
 for _ in range(int(input().strip())):
-    if cc_test.search(input().strip()):
+    if cc_check.search(input().strip()):
         print('Valid')
     else:
         print("Invalid")

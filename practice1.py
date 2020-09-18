@@ -130,27 +130,74 @@ from html.parser import HTMLParser
 #     parser.feed(input())
 
 
-class CustomHTMLParser(HTMLParser):
-    def handle_comment(self, data):
-        number_of_line = len(data.split('\n'))
-        if number_of_line > 1:
-            print('>>> Multi-line Comment')
-        else:
-            print('>>> Single-line Comment')
-        if data.strip():
-            print(data)
+# class CustomHTMLParser(HTMLParser):
+#     def handle_comment(self, data):
+#         number_of_line = len(data.split('\n'))
+#         if number_of_line > 1:
+#             print('>>> Multi-line Comment')
+#         else:
+#             print('>>> Single-line Comment')
+#         if data.strip():
+#             print(data)
 
-    def handle_data(self, data):
-        if data.strip():
-            print(">>> Data")
-            print(data)
-N= input()
-parser = CustomHTMLParser()
+#     def handle_data(self, data):
+#         if data.strip():
+#             print(">>> Data")
+#             print(data)
+# N= input()
+# parser = CustomHTMLParser()
 # set initial value of html string
-html_str = ''
+# html_str = ''
 # loop through the input
-for _ in range(int(N)):
-    html_str += input().rstrip()+'\n'
+# for _ in range(int(N)):
+#     html_str += input().rstrip()+'\n'
 
-parser.feed(html_str)
-parser.close()
+# parser.feed(html_str)
+# parser.close()
+
+# =========================
+# You are given an HTML code snippet of  lines.
+# Your task is to detect and print all the HTML tags, attributes and attribute values.
+# class MyHTMLParser(HTMLParser):
+#     def handle_starttag(self, tag, attrs):
+#         print(tag)
+#         [print('-> {} > {}'.format(*attr)) for attr in attrs]
+
+
+# html_str = '\n'.join([input() for _ in range(int(input()))])
+# parser = MyHTMLParser()
+# parser.feed(html_str)
+# parser.close()
+
+# =======================
+# ABCXYZ company has up to  employees.
+# The company decides to create a unique identification number(UID) for each of its employees.
+# The company has assigned you the task of validating all the randomly generated UIDs.
+# A valid UID must follow the rules below:
+
+# It must contain at least  uppercase English alphabet characters.
+# It must contain at least  digits(-).
+# It should only contain alphanumeric characters(-,  - & -).
+# No character should repeat.
+# There must be exactly  characters in a valid UID.
+
+
+# [print('Valid') if re.match(r'^(?!.*(.).*\1)(?=(?:.*[A-Z]){2,})(?=(?:.*\d){3,})[a-zA-Z0-9]{10}$', input(
+# )) else print('Invalid') for _ in range(int(input()))]
+
+N = input('B1CD102354')
+for _ in range(int(N)):
+    if re.match(r'^(?!.*(.).*\1)(?=(?:.*[A-Z]){2,})(?=(?:.*\d){3,})[a-zA-Z0-9]{10}$', input(
+    )):
+        print('Valid')
+    else:
+        print('Invalid')
+
+# Explanation:
+
+# (?!.*(.).*\1) checks no repeating characters
+# (?=(?: .*[A-Z]){2, }) checks at least 2 uppercase letters
+# (?=(?: .*\d){3, }) checks at least 3 digits
+# [a-zA-Z0-9]{10} checks exactly 10 alphanumeric characters.
+
+# ================================

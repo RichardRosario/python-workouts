@@ -21,12 +21,39 @@ import re
 # Neo feels that there is no need to use 'if' conditions for decoding.
 
 # Alphanumeric characters consist of: [A-Z, a-z, and 0-9].
-n, m = map(int, input().split())
-a, b = [], ""
-for _ in range(n):
-    a.append(input())
+# n, m = map(int, input().split())
+# a, b = [], ""
+# for _ in range(n):
+#     a.append(input())
 
-for z in zip(*a):
-    b += "".join(z)
+# for z in zip(*a):
+#     b += "".join(z)
 
 # print(re.sub(r"(?<=\w)([^\w]+)(?=\w)", " ", b))
+
+# ======================
+# Ms. Gabriel Williams is a botany professor at District College. One day, she asked her student Mickey to compute the average of all the plants with distinct heights in her greenhouse.
+# def average(array):
+#     return sum(set(array)) / len(set(array))
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     result = average(arr)
+#     print(result)
+# ============================
+# Given  sets of integers,  and , print their symmetric difference in ascending order. The term symmetric difference indicates those values that exist in either  or  but do not exist in both.
+# M, m = input(), set(list(map(int, input().split())))
+# N, n = input(), set(list(map(int, input().split())))
+# s = sorted(list(m.difference(n))+list(n.difference(m)))
+# for i in s:
+#     print(i)
+
+# =================
+# n, m = input().split()
+# arr = [int(x) for x in input().split()]
+# A = set([int(y) for y in input().split()])
+# B = set([int(z) for z in input().split()])
+# count = [0 + 1 if x in A else 0-1 if x in B else 0 + 0 for x in arr]
+# print(sum(count))

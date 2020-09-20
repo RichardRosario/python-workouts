@@ -57,3 +57,30 @@ import re
 # B = set([int(z) for z in input().split()])
 # count = [0 + 1 if x in A else 0-1 if x in B else 0 + 0 for x in arr]
 # print(sum(count))
+
+# =====================
+# Apply your knowledge of the .add() operation to help your friend Rupal.
+# num = input()
+# dist = set()
+# for i in range(int(num)):
+#     dist.add(input())
+# print(len(dist))
+
+# =========================
+n = int(input())
+s = set(map(int, input().split()))
+q = int(input())
+for i in range(q):
+    choice = input()
+    temp = choice.split(" ")
+    if temp[0] == 'remove':
+        if int(temp[1]) in s:
+            s.remove(int(temp[1]))
+    elif temp[0] == 'discard':
+        if int(temp[1]) in s:
+            s.discard(int(temp[1]))
+    elif temp[0] == 'pop':
+        s.pop()
+
+
+# print(sum(s))

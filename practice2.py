@@ -67,20 +67,29 @@ import re
 # print(len(dist))
 
 # =========================
-n = int(input())
-s = set(map(int, input().split()))
-q = int(input())
-for i in range(q):
-    choice = input()
-    temp = choice.split(" ")
-    if temp[0] == 'remove':
-        if int(temp[1]) in s:
-            s.remove(int(temp[1]))
-    elif temp[0] == 'discard':
-        if int(temp[1]) in s:
-            s.discard(int(temp[1]))
-    elif temp[0] == 'pop':
-        s.pop()
+# n = int(input())
+# s = set(map(int, input().split()))
+# q = int(input())
+# for i in range(q):
+#     choice = input()
+#     temp = choice.split(" ")
+#     if temp[0] == 'remove':
+#         if int(temp[1]) in s:
+#             s.remove(int(temp[1]))
+#     elif temp[0] == 'discard':
+#         if int(temp[1]) in s:
+#             s.discard(int(temp[1]))
+#     elif temp[0] == 'pop':
+#         s.pop()
 
 
 # print(sum(s))
+# =======================
+# The students of District College have subscriptions to English and French newspapers. Some students have subscribed only to English, some have subscribed to only French and some have subscribed to both newspapers.
+
+# You are given two sets of student roll numbers. One set has subscribed to the English newspaper, and the other set is subscribed to the French newspaper. The same student could be in both sets. Your task is to find the total number of students who have subscribed to at least one newspaper.
+n = input()
+set_n = set(map(int, input().split()))
+b = input()
+set_b = set(map(int, input().split()))
+# print(len(set_n.union(set_b)))

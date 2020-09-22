@@ -112,3 +112,32 @@ n2, fr = int(input()), set(input().split())
 
 result = eng.union(fr) - eng.intersection(fr)
 # print(len(result))
+
+# =======================
+# You are given a set A and N number of other sets. These N number of sets have to perform some specific mutation operations on set A.
+# Your task is to execute those operations and print the sum of elements from set A.
+# m = int(input())
+# A = set(map(int, input().split(" ")))
+# n = int(input())
+
+# for i in range(n):
+#     cmd, args = input().split(" ")
+#     B = set(map(int, input().split(" ")))
+#     eval('A.'+cmd+'(B)')
+
+# print(sum(A))
+# =========================
+# K = int(input())
+# rooms = input().split()
+
+# rooms.sort()
+# capt_room = (set(rooms[0::2]) ^ set(rooms[1::2]))
+# print(capt_room.pop())
+
+# ======================
+# You are given two sets,  A and B.
+# Your job is to find whether set A is a subset of set B.
+for i in range(int(input())):
+    _, a = input(), set(map(int, input().split()))
+    _, b = input(), set(map(int, input().split()))
+    print(a.issubset(b))

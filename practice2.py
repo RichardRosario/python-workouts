@@ -98,19 +98,19 @@ import re
 # num1, st1, num2, st2 = (set(input().split()) for i in range(4))
 # print(len(st1.intersection(st2)))
 # ======================
-n1 = int(input())
-set1 = set(map(int, input().split()))
-n2 = int(input())
-set2 = set(map(int, input().split()))
+# n1 = int(input())
+# set1 = set(map(int, input().split()))
+# n2 = int(input())
+# set2 = set(map(int, input().split()))
 # print(len(set1-set2))
 
 # =======================
 # You are given two sets of student roll numbers. One set has subscribed to the English newspaper, and one set has subscribed to the French newspaper. Your task is to find the total number of students who have subscribed to either the English or the French newspaper but not both.
-n1, eng = int(input()), set(input().split())
+# n1, eng = int(input()), set(input().split())
 
-n2, fr = int(input()), set(input().split())
+# n2, fr = int(input()), set(input().split())
 
-result = eng.union(fr) - eng.intersection(fr)
+# result = eng.union(fr) - eng.intersection(fr)
 # print(len(result))
 
 # =======================
@@ -137,7 +137,11 @@ result = eng.union(fr) - eng.intersection(fr)
 # ======================
 # You are given two sets,  A and B.
 # Your job is to find whether set A is a subset of set B.
-for i in range(int(input())):
-    _, a = input(), set(map(int, input().split()))
-    _, b = input(), set(map(int, input().split()))
-    print(a.issubset(b))
+# for i in range(int(input())):
+#     _, a = input(), set(map(int, input().split()))
+#     _, b = input(), set(map(int, input().split()))
+#     print(a.issubset(b))
+# ======================
+# More than 2 lines will result in 0 score. Do not leave a blank line also
+for i in range(1, int(input())):
+    print((10**(i)//9)*i)

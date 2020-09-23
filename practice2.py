@@ -142,6 +142,12 @@ import re
 #     _, b = input(), set(map(int, input().split()))
 #     print(a.issubset(b))
 # ======================
-# More than 2 lines will result in 0 score. Do not leave a blank line also
-for i in range(1, int(input())):
-    print((10**(i)//9)*i)
+# You are given a positive integer N. Print a numerical triangle of height N-1: More than 2 lines will result in 0 score. Do not leave a blank line also
+# for i in range(1, int(input())):
+#     print((10**(i)//9)*i)
+
+# a, b, m = [input().split() for _ in range(3)]
+# print(pow(a, b), pow(a, b, m), sep='\n')
+
+# a,b,c,d = (int(input()) for _ in range(4))
+# print (pow(a,b)+pow(c,d))

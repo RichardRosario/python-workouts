@@ -164,3 +164,15 @@ import re
 # for i in range(int(input())):
 #     print(int(abs((dt.strptime(input(), fmt) -
 #                    dt.strptime(input(), fmt)).total_seconds())))
+
+# =================================
+# You are given  words. Some words may repeat. For each word, output its number of occurrences. The output order should correspond with the input order of appearance of the word. See the sample input/output for clarification.
+
+# Note: Each input line ends with a "\n" character.
+from collections import OrderedDict
+words = OrderedDict()
+for i in range(int(input())):
+    eachword = input().strip()
+    words[eachword] = words.get(eachword, 0) + 1
+print(len(words))
+print(*words.values())

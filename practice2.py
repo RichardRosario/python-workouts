@@ -4,6 +4,7 @@
 # must be a number in the range from to  inclusive.
 # must not contain more than one alternating repetitive digit pair.
 # Alternating repetitive digits are digits which repeat immediately after the next digit. In other words, an alternating repetitive digit pair is formed by two equal digits that have just a single digit between them.
+from datetime import datetime as dt
 import re
 # print(bool(re.match(
 #     r'^'
@@ -153,6 +154,13 @@ import re
 # print (pow(a,b)+pow(c,d))
 # ===================================
 # You are given a date. Your task is to find what the day is on that date.
-import calendar
-m, d, y = map(int, input().split())
-print(calendar.day_name[calendar.weekday(y, m, d)].upper())
+# import calendar
+# m, d, y = map(int, input().split())
+# print(calendar.day_name[calendar.weekday(y, m, d)].upper())
+
+# ==========================
+
+# fmt = '%a %d %b %Y %H:%M:%S %z'
+# for i in range(int(input())):
+#     print(int(abs((dt.strptime(input(), fmt) -
+#                    dt.strptime(input(), fmt)).total_seconds())))

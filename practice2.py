@@ -151,3 +151,8 @@ import re
 
 # a,b,c,d = (int(input()) for _ in range(4))
 # print (pow(a,b)+pow(c,d))
+# ===================================
+# You are given a date. Your task is to find what the day is on that date.
+import calendar
+m, d, y = map(int, input().split())
+print(calendar.day_name[calendar.weekday(y, m, d)].upper())

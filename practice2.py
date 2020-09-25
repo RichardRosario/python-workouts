@@ -6,6 +6,7 @@
 # Alternating repetitive digits are digits which repeat immediately after the next digit. In other words, an alternating repetitive digit pair is formed by two equal digits that have just a single digit between them.
 from datetime import datetime as dt
 import re
+from collections import deque
 # print(bool(re.match(
 #     r'^'
 #     r'(?!.*(.).\1.*(.).\2)'
@@ -170,9 +171,17 @@ import re
 
 # Note: Each input line ends with a "\n" character.
 from collections import OrderedDict
-words = OrderedDict()
-for i in range(int(input())):
-    eachword = input().strip()
-    words[eachword] = words.get(eachword, 0) + 1
-print(len(words))
-print(*words.values())
+# words = OrderedDict()
+# for i in range(int(input())):
+#     eachword = input().strip()
+#     words[eachword] = words.get(eachword, 0) + 1
+# print(len(words))
+# print(*words.values())
+# =======================
+# from collections import deque
+# Perform append, pop, popleft and appendleft methods on an empty deque .
+d = deque()
+for _ in range(int(input())):
+    inp = input().split()
+    getattr(d, inp[0])(*[inp[1]] if len(inp) > 1 else [])
+print(*[item for item in d])

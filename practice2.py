@@ -180,8 +180,36 @@ from collections import OrderedDict
 # =======================
 # from collections import deque
 # Perform append, pop, popleft and appendleft methods on an empty deque .
-d = deque()
-for _ in range(int(input())):
-    inp = input().split()
-    getattr(d, inp[0])(*[inp[1]] if len(inp) > 1 else [])
-print(*[item for item in d])
+# d = deque()
+# for _ in range(int(input())):
+#     inp = input().split()
+#     getattr(d, inp[0])(*[inp[1]] if len(inp) > 1 else [])
+# print(*[item for item in d])
+# ==========================
+# There is a horizontal row of  cubes. The length of each cube is given. You need to create a new vertical pile of cubes. The new pile should follow these directions: if cube is on top of cube then sideLengthj >= sidelengthi.
+
+# for _ in range(int(input())):
+#     _, queue = input(), deque(map(int, input().split()))
+
+#     for cube in reversed(sorted(queue)):
+#         if queue[-1] == cube:
+#             queue.pop()
+#         elif queue[0] == cube:
+#             queue.popleft()
+#         else:
+#             print('No')
+#             break
+#     else:
+#         print('Yes')
+#
+# without using deque
+# for t in range(input()):
+#     input()
+#     lst = map(int, input().split())
+#     l = len(lst)
+#     i = 0
+#     while i < l - 1 and lst[i] >= lst[i+1]:
+#         i += 1
+#     while i < l - 1 and lst[i] <= lst[i+1]:
+#         i += 1
+#     print("Yes" if i == l - 1 else "No")

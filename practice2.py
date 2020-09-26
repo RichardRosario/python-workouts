@@ -213,3 +213,28 @@ from collections import OrderedDict
 #     while i < l - 1 and lst[i] <= lst[i+1]:
 #         i += 1
 #     print("Yes" if i == l - 1 else "No")
+# ==================================
+# from collections import Counter, OrderedDict
+
+
+# class OrderedCounter(Counter, OrderedDict):
+#     pass
+
+
+# [print(*c) for c in OrderedCounter(sorted(input())).most_common(3)]
+# ============================
+# Debug the given function print_from_stream using the default value of one of its arguments.
+
+# The function has the following signature:
+
+
+# def print_from_stream(n, stream)
+
+
+# This function should print the first  values returned by get_next() method of stream object provided as an argument. Each of these values should be printed in a separate line.
+
+# Whenever the function is called without the stream argument, it should use an instance of EvenStream class defined in the code stubs below as the value of stream.
+# def print_from_stream(n, stream=EvenStream()):
+#     stream.__init__()
+#     for _ in range(n):
+#         print(stream.get_next())

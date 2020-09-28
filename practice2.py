@@ -284,6 +284,46 @@ from collections import OrderedDict
 # Given an integer, , and  space-separated integers as input, create a tuple, , of those  integers. Then compute and print the result of .
 # print(input() == 0 or hash(tuple(map(int, input().strip().split()))))
 # ===================================
-x, y, z, n = int(input()), int(input()), int(input()), int(input())
-print([[a, b, c] for a in range(0, x+1) for b in range(0, y+1)
-       for c in range(0, z+1) if a + b + c != n])
+# x, y, z, n = int(input()), int(input()), int(input()), int(input())
+# print([[a, b, c] for a in range(0, x+1) for b in range(0, y+1)
+#        for c in range(0, z+1) if a + b + c != n])
+# =====================================
+# Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. You are given  scores. Store them in a list and find the score of the runner-up.
+# i = int(input())
+# lis = list(map(int, input().strip().split()))[:i]
+# z = max(lis)
+# while max(lis) == z:
+#     lis.remove(max(lis))
+
+# print(max(lis))
+
+# =========================
+# Given the names and grades for each student in a class of  students, store them in a nested list and print the name(s) of any student(s) having the second lowest grade.
+
+# Note: If there are multiple students with the second lowest grade, order their names alphabetically and print each name on a new line.
+# d = {}
+# for _ in range(int(input())):
+#     Name = input()
+#     Grade = float(input())
+#     d[Name] = Grade
+# v = d.values()
+# second = sorted(list(set(v)))[1]
+# second_lowest = []
+# for key, value in d.items():
+#     if value == second:
+#         second_lowest.append(key)
+# second_lowest.sort()
+# for name in second_lowest:
+#     print(name)
+# ================================
+# The provided code stub will read in a dictionary containing key/value pairs of name:[marks] for a list of students. Print the average of the marks array for the student name provided, showing 2 places after the decimal.
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    query_scores = student_marks[query_name]
+    print("{0:.2f}".format(sum(query_scores)/(len(query_scores))))

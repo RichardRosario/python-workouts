@@ -238,3 +238,48 @@ from collections import OrderedDict
 #     stream.__init__()
 #     for _ in range(n):
 #         print(stream.get_next())
+
+
+# ============================
+# You are given a string S.
+# Your task is to find out whether S is a valid regex or not.
+# for _ in range(int(input())):
+#     try:
+#         print(bool(re.compile(input())))
+#     except re.error:
+#         print('False')
+
+# ===============================
+# Consider a list (list = []). You can perform the following commands:
+
+# insert i e: Insert integer  at position .
+# print: Print the list.
+# remove e: Delete the first occurrence of integer .
+# append e: Insert integer  at the end of the list.
+# sort: Sort the list.
+# pop: Pop the last element from the list.
+# reverse: Reverse the list.
+# Initialize your list and read in the value of  followed by  lines of commands where each command will be of the  types listed above. Iterate through each command in order and perform the corresponding operation on your list.
+
+# n = int(input())
+# operations = [input().strip() for _ in range(n)]
+
+# list_ = []
+
+# commands = {
+#     'insert': lambda idx, ele: list_.insert(int(idx), int(ele)),
+#     'print': lambda: print(list_),
+#     'remove': lambda ele: list_.remove(int(ele)),
+#     'append': lambda ele: list_.append(int(ele)),
+#     'sort': lambda: list_.sort(),
+#     'pop': lambda: list_.pop(),
+#     'reverse': lambda: list_.reverse(),
+# }
+
+# for operation in operations:
+#     name, args = [i.strip() for i in (operation + ' ').split(' ', maxsplit=1)]
+#     command = commands.get(name)
+#     command(*args.split())
+
+# Given an integer, , and  space-separated integers as input, create a tuple, , of those  integers. Then compute and print the result of .
+print(input() == 0 or hash(tuple(map(int, input().strip().split()))))

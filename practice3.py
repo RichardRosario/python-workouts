@@ -46,6 +46,11 @@
 # The characters in u are a subsequence of the characters in ti.
 # Any repeat occurrence of a character is removed from the string such that each character in u occurs exactly once. In other words, if the character at some index j in  ti occurs at a previous index <j in ti, then do not include the character in string ui.
 # Given s and k, print n/k lines where each line i denotes string u.
+import operator
+from functools import reduce
+from fractions import Fraction
+
+
 def merge_the_tools(string, k):
     while string:
         s = string[0:k]
@@ -60,3 +65,24 @@ def merge_the_tools(string, k):
 if __name__ == '__main__':
     string, k = input(), int(input())
     merge_the_tools(string, k)
+
+# ========================
+# reduce operator
+# Given a list of rational numbers,find their product.
+
+# Concept
+# The reduce() function applies a function of two arguments cumulatively on a list of objects in succession from left to right to reduce it to one value. Say you have a list, say[1, 2, 3] and you have to find its sum.
+
+
+def product(fracs):
+    # complete this line with a reduce statement
+    t = reduce(operator.mul, fracs)
+    return t.numerator, t.denominator
+
+
+if __name__ == '__main__':
+    fracs = []
+    for _ in range(int(input())):
+        fracs.append(Fraction(*map(int, input().split())))
+    result = product(fracs)
+    print(*result)

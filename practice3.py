@@ -74,15 +74,28 @@ if __name__ == '__main__':
 # The reduce() function applies a function of two arguments cumulatively on a list of objects in succession from left to right to reduce it to one value. Say you have a list, say[1, 2, 3] and you have to find its sum.
 
 
-def product(fracs):
-    # complete this line with a reduce statement
-    t = reduce(operator.mul, fracs)
-    return t.numerator, t.denominator
+# def product(fracs):
+#     # complete this line with a reduce statement
+#     t = reduce(operator.mul, fracs)
+#     return t.numerator, t.denominator
+
+
+# if __name__ == '__main__':
+#     fracs = []
+#     for _ in range(int(input())):
+#         fracs.append(Fraction(*map(int, input().split())))
+#     result = product(fracs)
+#     print(*result)
+# ===============================
+# You are given an integer, . Your task is to print an alphabet rangoli of size . (Rangoli is a form of Indian folk art based on creation of patterns.)
+def print_rangoli(size):
+    # your code goes here
+    from string import ascii_lowercase as chars
+    heap = [(('-'.join(chars[i:n])[::-1]+'-'.join(chars[i:n])[1:])
+             ).center(4*n-3, '-')for i in range(n)]
+    print(*(heap[::-1]+heap[1:]), sep="\n")
 
 
 if __name__ == '__main__':
-    fracs = []
-    for _ in range(int(input())):
-        fracs.append(Fraction(*map(int, input().split())))
-    result = product(fracs)
-    print(*result)
+    n = int(input())
+    print_rangoli(n)

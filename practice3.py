@@ -88,14 +88,91 @@ if __name__ == '__main__':
 #     print(*result)
 # ===============================
 # You are given an integer, . Your task is to print an alphabet rangoli of size . (Rangoli is a form of Indian folk art based on creation of patterns.)
-def print_rangoli(size):
-    # your code goes here
-    from string import ascii_lowercase as chars
-    heap = [(('-'.join(chars[i:n])[::-1]+'-'.join(chars[i:n])[1:])
-             ).center(4*n-3, '-')for i in range(n)]
-    print(*(heap[::-1]+heap[1:]), sep="\n")
+# def print_rangoli(size):
+#     # your code goes here
+#     from string import ascii_lowercase as chars
+#     heap = [(('-'.join(chars[i:n])[::-1]+'-'.join(chars[i:n])[1:])
+#              ).center(4*n-3, '-')for i in range(n)]
+#     print(*(heap[::-1]+heap[1:]), sep="\n")
 
 
-if __name__ == '__main__':
-    n = int(input())
-    print_rangoli(n)
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_rangoli(n)
+# ====================================
+# You are asked to ensure that the first and last names of people begin with a capital letter in their passports. For example, alison heck should be capitalised correctly as Alison Heck.
+
+# def capitalize(s):
+#     for x in s[:].split(" "):
+#         s = s.replace(x, x.capitalize())
+#         s = "".join(s)
+#     return s
+# ==================================
+# For this challenge, you are given two complex numbers, and you have to print the result of their addition, subtraction, multiplication, division and modulus operations.
+
+# The real and imaginary precision part should be correct up to two decimal places.
+class Complex(object):
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
+
+    def __add__(self, no):
+        a = self.real+no.real
+        b = self.imaginary+no.imaginary
+        if a < 0 and b < 0:
+            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b < 0:
+            return ("%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a < 0 and b >= 0:
+            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b >= 0:
+            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+
+    def __sub__(self, no):
+        a = self.real-no.real
+        b = self.imaginary-no.imaginary
+        if a < 0 and b < 0:
+            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b < 0:
+            return ("%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a < 0 and b >= 0:
+            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b >= 0:
+            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+
+    def __mul__(self, no):
+        a = self.real*no.real-self.imaginary*no.imaginary
+        b = no.imaginary*self.real+self.imaginary*no.real
+        if a < 0 and b < 0:
+            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b < 0:
+            return ("%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a < 0 and b >= 0:
+            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b >= 0:
+            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+
+    def __truediv__(self, no):
+        x = no.real**2+no.imaginary**2
+        a = (self.real*no.real+self.imaginary*no.imaginary)/x
+        b = (-no.imaginary*self.real+self.imaginary*no.real)/x
+        if a < 0 and b < 0:
+            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b < 0:
+            return ("%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a < 0 and b >= 0:
+            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b >= 0:
+            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+
+    def mod(self):
+        a = pow(self.real**2+self.imaginary**2, 0.5)
+        b = 0
+        if a < 0 and b < 0:
+            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b < 0:
+            return ("%.2f-%.2fi" % (abs(a), abs(b)))
+        elif a < 0 and b >= 0:
+            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+        elif a >= 0 and b >= 0:
+            return ("%.2f+%.2fi" % (abs(a), abs(b)))

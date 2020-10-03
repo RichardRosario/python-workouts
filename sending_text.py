@@ -13,7 +13,7 @@ for temp in new_week_temps_f:
 
 avg_temp = sum / count
 
-
+# text to speech
 # open-read pdf file and assignt o variable
 book = open('LMPy3theHardWay.pdf', 'rb')
 pdfReader = PyPDF2.PdfFileReader(book)

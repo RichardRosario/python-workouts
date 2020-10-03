@@ -46,25 +46,25 @@
 # The characters in u are a subsequence of the characters in ti.
 # Any repeat occurrence of a character is removed from the string such that each character in u occurs exactly once. In other words, if the character at some index j in  ti occurs at a previous index <j in ti, then do not include the character in string ui.
 # Given s and k, print n/k lines where each line i denotes string u.
-import operator
-from functools import reduce
-from fractions import Fraction
+# import operator
+# from functools import reduce
+# from fractions import Fraction
 
 
-def merge_the_tools(string, k):
-    while string:
-        s = string[0:k]
-        seen = ''
-        for c in s:
-            if c not in seen:
-                seen += c
-        print(seen)
-        string = string[k:]
+# def merge_the_tools(string, k):
+#     while string:
+#         s = string[0:k]
+#         seen = ''
+#         for c in s:
+#             if c not in seen:
+#                 seen += c
+#         print(seen)
+#         string = string[k:]
 
 
-if __name__ == '__main__':
-    string, k = input(), int(input())
-    merge_the_tools(string, k)
+# if __name__ == '__main__':
+#     string, k = input(), int(input())
+#     merge_the_tools(string, k)
 
 # ========================
 # reduce operator
@@ -111,68 +111,86 @@ if __name__ == '__main__':
 # For this challenge, you are given two complex numbers, and you have to print the result of their addition, subtraction, multiplication, division and modulus operations.
 
 # The real and imaginary precision part should be correct up to two decimal places.
-class Complex(object):
-    def __init__(self, real, imaginary):
-        self.real = real
-        self.imaginary = imaginary
+# class Complex(object):
+#     def __init__(self, real, imaginary):
+#         self.real = real
+#         self.imaginary = imaginary
 
-    def __add__(self, no):
-        a = self.real+no.real
-        b = self.imaginary+no.imaginary
-        if a < 0 and b < 0:
-            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b < 0:
-            return ("%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a < 0 and b >= 0:
-            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b >= 0:
-            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+#     def __add__(self, no):
+#         a = self.real+no.real
+#         b = self.imaginary+no.imaginary
+#         if a < 0 and b < 0:
+#             return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b < 0:
+#             return ("%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a < 0 and b >= 0:
+#             return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b >= 0:
+#             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 
-    def __sub__(self, no):
-        a = self.real-no.real
-        b = self.imaginary-no.imaginary
-        if a < 0 and b < 0:
-            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b < 0:
-            return ("%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a < 0 and b >= 0:
-            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b >= 0:
-            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+#     def __sub__(self, no):
+#         a = self.real-no.real
+#         b = self.imaginary-no.imaginary
+#         if a < 0 and b < 0:
+#             return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b < 0:
+#             return ("%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a < 0 and b >= 0:
+#             return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b >= 0:
+#             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 
-    def __mul__(self, no):
-        a = self.real*no.real-self.imaginary*no.imaginary
-        b = no.imaginary*self.real+self.imaginary*no.real
-        if a < 0 and b < 0:
-            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b < 0:
-            return ("%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a < 0 and b >= 0:
-            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b >= 0:
-            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+#     def __mul__(self, no):
+#         a = self.real*no.real-self.imaginary*no.imaginary
+#         b = no.imaginary*self.real+self.imaginary*no.real
+#         if a < 0 and b < 0:
+#             return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b < 0:
+#             return ("%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a < 0 and b >= 0:
+#             return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b >= 0:
+#             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 
-    def __truediv__(self, no):
-        x = no.real**2+no.imaginary**2
-        a = (self.real*no.real+self.imaginary*no.imaginary)/x
-        b = (-no.imaginary*self.real+self.imaginary*no.real)/x
-        if a < 0 and b < 0:
-            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b < 0:
-            return ("%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a < 0 and b >= 0:
-            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b >= 0:
-            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+#     def __truediv__(self, no):
+#         x = no.real**2+no.imaginary**2
+#         a = (self.real*no.real+self.imaginary*no.imaginary)/x
+#         b = (-no.imaginary*self.real+self.imaginary*no.real)/x
+#         if a < 0 and b < 0:
+#             return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b < 0:
+#             return ("%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a < 0 and b >= 0:
+#             return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b >= 0:
+#             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 
-    def mod(self):
-        a = pow(self.real**2+self.imaginary**2, 0.5)
-        b = 0
-        if a < 0 and b < 0:
-            return ("-%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b < 0:
-            return ("%.2f-%.2fi" % (abs(a), abs(b)))
-        elif a < 0 and b >= 0:
-            return ("-%.2f+%.2fi" % (abs(a), abs(b)))
-        elif a >= 0 and b >= 0:
-            return ("%.2f+%.2fi" % (abs(a), abs(b)))
+#     def mod(self):
+#         a = pow(self.real**2+self.imaginary**2, 0.5)
+#         b = 0
+#         if a < 0 and b < 0:
+#             return ("-%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b < 0:
+#             return ("%.2f-%.2fi" % (abs(a), abs(b)))
+#         elif a < 0 and b >= 0:
+#             return ("-%.2f+%.2fi" % (abs(a), abs(b)))
+#         elif a >= 0 and b >= 0:
+#             return ("%.2f+%.2fi" % (abs(a), abs(b)))
+# =======================================
+# You are given a valid XML document, and you have to print its score. The score is calculated by the sum of the score of each element. For any element, the score is equal to the number of attributes it has.
+import sys
+import xml.etree.ElementTree as etree
+
+
+def get_attr_number(node):
+    # your code goes here
+    out = len(node.attrib)
+    return out+sum((get_attr_number(child) for child in node))
+
+
+if __name__ == '__main__':
+    sys.stdin.readline()
+    xml = sys.stdin.read()
+    tree = etree.ElementTree(etree.fromstring(xml))
+    root = tree.getroot()
+    print(get_attr_number(root))

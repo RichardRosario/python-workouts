@@ -182,15 +182,38 @@ import sys
 import xml.etree.ElementTree as etree
 
 
-def get_attr_number(node):
+# def get_attr_number(node):
+#     # your code goes here
+#     out = len(node.attrib)
+#     return out+sum((get_attr_number(child) for child in node))
+
+
+# if __name__ == '__main__':
+#     sys.stdin.readline()
+#     xml = sys.stdin.read()
+#     tree = etree.ElementTree(etree.fromstring(xml))
+#     root = tree.getroot()
+#     print(get_attr_number(root))
+
+# You are given a valid XML document, and you have to print the maximum level of nesting in it. Take the depth of the root as 0.
+maxdepth = 0
+
+
+def depth(elem, level):
+    global maxdepth
     # your code goes here
-    out = len(node.attrib)
-    return out+sum((get_attr_number(child) for child in node))
+    level += 1
+    if level >= maxdepth:
+        maxdepth = level
+    for child in elem:
+        depth(child, level)
 
 
 if __name__ == '__main__':
-    sys.stdin.readline()
-    xml = sys.stdin.read()
+    n = int(input())
+    xml = ""
+    for i in range(n):
+        xml = xml + input() + "\n"
     tree = etree.ElementTree(etree.fromstring(xml))
-    root = tree.getroot()
-    print(get_attr_number(root))
+    depth(tree.getroot(), -1)
+    print(maxdepth)

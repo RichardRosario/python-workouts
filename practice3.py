@@ -196,24 +196,52 @@ import xml.etree.ElementTree as etree
 #     print(get_attr_number(root))
 
 # You are given a valid XML document, and you have to print the maximum level of nesting in it. Take the depth of the root as 0.
-maxdepth = 0
+# maxdepth = 0
 
 
-def depth(elem, level):
-    global maxdepth
-    # your code goes here
-    level += 1
-    if level >= maxdepth:
-        maxdepth = level
-    for child in elem:
-        depth(child, level)
+# def depth(elem, level):
+#     global maxdepth
+#     # your code goes here
+#     level += 1
+#     if level >= maxdepth:
+#         maxdepth = level
+#     for child in elem:
+#         depth(child, level)
 
 
-if __name__ == '__main__':
-    n = int(input())
-    xml = ""
-    for i in range(n):
-        xml = xml + input() + "\n"
-    tree = etree.ElementTree(etree.fromstring(xml))
-    depth(tree.getroot(), -1)
-    print(maxdepth)
+# if __name__ == '__main__':
+#     n = int(input())
+#     xml = ""
+#     for i in range(n):
+#         xml = xml + input() + "\n"
+#     tree = etree.ElementTree(etree.fromstring(xml))
+#     depth(tree.getroot(), -1)
+#     print(maxdepth)
+# =====================================
+import collections
+
+# numShoes = int(input())
+# shoes = collections.Counter(map(int, input().split()))
+# numCust = int(input())
+
+# income = 0
+
+# for i in range(numCust):
+#     size, price = map(int, input().split())
+#     if shoes[size]:
+#         income += price
+#         shoes[size] -= 1
+
+# print(income)
+
+# ===================================
+from collections import defaultdict
+d = defaultdict(list)
+
+n, m = map(int, input().split())
+
+for i in range(1, n+1):
+    d[input()].append(str(i))
+
+for i in range(m):
+    print(' '.join(d[input()]) or -1)

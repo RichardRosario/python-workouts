@@ -235,13 +235,50 @@ import collections
 # print(income)
 
 # ===================================
-from collections import defaultdict
-d = defaultdict(list)
+# from collections import defaultdict
+# d = defaultdict(list)
 
-n, m = map(int, input().split())
+# n, m = map(int, input().split())
 
-for i in range(1, n+1):
-    d[input()].append(str(i))
+# for i in range(1, n+1):
+#     d[input()].append(str(i))
 
-for i in range(m):
-    print(' '.join(d[input()]) or -1)
+# for i in range(m):
+#     print(' '.join(d[input()]) or -1)
+
+# ======================
+# namedtuple
+# Dr. John Wesley has a spreadsheet containing a list of student's ID, mark, class and name.
+
+# Your task is to help Dr. Wesley calculate the average marks of the students.
+from collections import namedtuple
+
+# N = int(input())
+# fields = input().split()
+
+# total = 0
+# for i in range(N):
+#     students = namedtuple('student', fields)
+#     field1, field2, field3, field4 = input().split()
+#     student = students(*input().split())
+#     total += int(student.MARKS)
+# print('{:.2f}'.format(total/N))
+# ==========================
+# You are the manager of a supermarket.
+# You have a list of N items together with their prices that consumers bought on a particular day.
+# Your task is to print each item_name and net_price in order of its first occurrence.
+from collections import OrderedDict
+
+number_ = int(input())
+odict = OrderedDict()
+for i in range(number_):
+    litem = input().split(' ')
+    price = int(litem[-1])
+    item_name = " ".join(litem[:-1])
+    if odict.get(item_name):
+        odict[item_name] += price
+    else:
+        odict[item_name] = price
+
+for i, v in odict.items():
+    print(i, v)

@@ -269,16 +269,21 @@ from collections import namedtuple
 # Your task is to print each item_name and net_price in order of its first occurrence.
 from collections import OrderedDict
 
-number_ = int(input())
-odict = OrderedDict()
-for i in range(number_):
-    litem = input().split(' ')
-    price = int(litem[-1])
-    item_name = " ".join(litem[:-1])
-    if odict.get(item_name):
-        odict[item_name] += price
-    else:
-        odict[item_name] = price
+# number_ = int(input())
+# odict = OrderedDict()
+# for i in range(number_):
+#     litem = input().split(' ')
+#     price = int(litem[-1])
+#     item_name = " ".join(litem[:-1])
+#     if odict.get(item_name):
+#         odict[item_name] += price
+#     else:
+#         odict[item_name] = price
 
-for i, v in odict.items():
-    print(i, v)
+# for i, v in odict.items():
+#     print(i, v)
+# ===========================\
+# You are given a complex z. Your task is to convert it to polar coordinates.
+import cmath
+
+[print(round(i, 3)) for i in cmath.polar(complex(input()))]

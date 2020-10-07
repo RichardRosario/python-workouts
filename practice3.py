@@ -178,6 +178,7 @@
 #             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 # =======================================
 # You are given a valid XML document, and you have to print its score. The score is calculated by the sum of the score of each element. For any element, the score is equal to the number of attributes it has.
+import math
 import sys
 import xml.etree.ElementTree as etree
 
@@ -286,4 +287,13 @@ from collections import OrderedDict
 # You are given a complex z. Your task is to convert it to polar coordinates.
 import cmath
 
-[print(round(i, 3)) for i in cmath.polar(complex(input()))]
+# [print(round(i, 3)) for i in cmath.polar(complex(input()))]
+# ==================================
+# You are given the lengths AB and BC.
+# Your task is to find MBC(angle theta, as shown in the figure) in degrees.
+
+AB, BC = int(input()), int(input())
+hype = math.hypot(AB, BC)  # to calculate hypotenuse
+res = round(math.degrees(math.acos(BC/hype)))  # to calculate required angle
+degree = chr(176)  # for DEGREE symbol
+print(res, degree, sep='')

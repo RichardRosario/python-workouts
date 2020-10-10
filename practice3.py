@@ -292,8 +292,13 @@ import cmath
 # You are given the lengths AB and BC.
 # Your task is to find MBC(angle theta, as shown in the figure) in degrees.
 
-AB, BC = int(input()), int(input())
-hype = math.hypot(AB, BC)  # to calculate hypotenuse
-res = round(math.degrees(math.acos(BC/hype)))  # to calculate required angle
-degree = chr(176)  # for DEGREE symbol
-print(res, degree, sep='')
+# AB, BC = int(input()), int(input())
+# hype = math.hypot(AB, BC)  # to calculate hypotenuse
+# res = round(math.degrees(math.acos(BC/hype)))  # to calculate required angle
+# degree = chr(176)  # for DEGREE symbol
+# print(res, degree, sep='')
+# =============================
+# You are given a positive integer n.
+# Your task is to print a palindromic triangle of size n.
+# for i in range(1,int(input())+1):
+# print((10**i//9)**2)

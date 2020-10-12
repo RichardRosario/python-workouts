@@ -302,3 +302,7 @@ import cmath
 # Your task is to print a palindromic triangle of size n.
 # for i in range(1,int(input())+1):
 # print((10**i//9)**2)
+
+# =========triangle quest
+for i in range(1, int(input())+1):
+    print((10**i//9)**2)

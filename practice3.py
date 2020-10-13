@@ -178,6 +178,7 @@
 #             return ("%.2f+%.2fi" % (abs(a), abs(b)))
 # =======================================
 # You are given a valid XML document, and you have to print its score. The score is calculated by the sum of the score of each element. For any element, the score is equal to the number of attributes it has.
+import re
 import math
 import sys
 import xml.etree.ElementTree as etree
@@ -306,3 +307,24 @@ import cmath
 # =========triangle quest
 for i in range(1, int(input())+1):
     print((10**i//9)**2)
+
+# ==========================================
+# You are given a string N.
+# Your task is to verify that N is a floating point number.
+# regex
+for _ in range(int(input())):
+    print(bool(re.match(r'^[-+]?[0-9]*\.[0-9]+$', input())))
+
+# without regex ===
+count = int(input().strip())
+for _ in range(count):
+    ans = False
+    try:
+        string = input().strip()
+        number = float(string)
+        ans = True
+        number = int(string)
+        ans = False
+    except:
+        pass
+    print(ans)

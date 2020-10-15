@@ -2,13 +2,28 @@
 
 # Your task is to complete the regex_pattern defined below, which will be used to re.split() all of the, and . symbols in S.
 #
+import numpy
 import re
 regex_pattern = r""  # Do not delete 'r'.
 
-print("\n".join(re.split(regex_pattern, input())))
+# print("\n".join(re.split(regex_pattern, input())))
 # answer: [.,]+
 # ========================================
 # You are given a string S.
 # Your task is to find the first occurrence of an alphanumeric character in S (read from left to right) that has consecutive repetitions.
-m = re.search(r'([a-zA-Z0-9])\1+', input().strip())
-print(m.group(1) if m else -1)
+# m = re.search(r'([a-zA-Z0-9])\1+', input().strip())
+# print(m.group(1) if m else -1)
+# ============================
+# numpy array
+# You are given a space separated list of numbers.
+# Your task is to print a reversed NumPy array with the element type float.
+#
+
+
+def arrays(arr):
+    return(numpy.array(arr[::-1], float))
+
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)

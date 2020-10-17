@@ -2,6 +2,7 @@
 
 # Your task is to complete the regex_pattern defined below, which will be used to re.split() all of the, and . symbols in S.
 #
+import numpy as np
 import numpy
 import re
 regex_pattern = r""  # Do not delete 'r'.
@@ -20,10 +21,21 @@ regex_pattern = r""  # Do not delete 'r'.
 #
 
 
-def arrays(arr):
-    return(numpy.array(arr[::-1], float))
+# def arrays(arr):
+#     return(numpy.array(arr[::-1], float))
 
 
-arr = input().strip().split(' ')
-result = arrays(arr)
-print(result)
+# arr = input().strip().split(' ')
+# result = arrays(arr)
+# print(result)
+# ==============================
+# shape and reshape with numpy
+# print(np.array(input().split(), int).reshape(3, 3))
+
+# You are given a NxM integer array matrix with space separated elements ( N= rows and  M= columns).
+# Your task is to print the transpose and flatten results.
+
+N, M = map(int, input().split())
+array = np.array([input().strip().split() for _ in range(N)], int)
+print(array.transpose())
+print(array.flatten())

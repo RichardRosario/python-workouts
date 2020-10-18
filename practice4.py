@@ -35,7 +35,15 @@ regex_pattern = r""  # Do not delete 'r'.
 # You are given a NxM integer array matrix with space separated elements ( N= rows and  M= columns).
 # Your task is to print the transpose and flatten results.
 
-N, M = map(int, input().split())
-array = np.array([input().strip().split() for _ in range(N)], int)
-print(array.transpose())
-print(array.flatten())
+# N, M = map(int, input().split())
+# array = np.array([input().strip().split() for _ in range(N)], int)
+# print(array.transpose())
+# print(array.flatten())
+
+# ===============================
+# You are given two integer arrays of size N X P and M X P (N & M are rows, and P is the column). Your task is to concatenate the arrays along axis 0.
+
+N, M, P = map(int, input().split())
+arrA = np.array([input().split() for _ in range(N)], int)
+arrB = np.array([input().split() for _ in range(M)], int)
+print(np.concatenate((arrA, arrB), axis=0))

@@ -43,7 +43,18 @@ regex_pattern = r""  # Do not delete 'r'.
 # ===============================
 # You are given two integer arrays of size N X P and M X P (N & M are rows, and P is the column). Your task is to concatenate the arrays along axis 0.
 
-N, M, P = map(int, input().split())
-arrA = np.array([input().split() for _ in range(N)], int)
-arrB = np.array([input().split() for _ in range(M)], int)
-print(np.concatenate((arrA, arrB), axis=0))
+# N, M, P = map(int, input().split())
+# arrA = np.array([input().split() for _ in range(N)], int)
+# arrB = np.array([input().split() for _ in range(M)], int)
+# print(np.concatenate((arrA, arrB), axis=0))
+
+# ================================
+# You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
+def swap_case(s):
+    return s.swapcase()
+
+
+if __name__ == '__main__':
+    s = input()
+    result = swap_case(s)
+    print(result)

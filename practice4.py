@@ -50,11 +50,27 @@ regex_pattern = r""  # Do not delete 'r'.
 
 # ================================
 # You are given a string and your task is to swap cases. In other words, convert all lowercase letters to uppercase letters and vice versa.
-def swap_case(s):
-    return s.swapcase()
+# def swap_case(s):
+#     return s.swapcase()
+
+
+# if __name__ == '__main__':
+#     s = input()
+#     result = swap_case(s)
+#     print(result)
+
+# ==================string split and join
+# You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
+
+
+def split_and_join(line):
+    # write your code here
+    x = line.split(" ")
+    x = "-".join(x)
+    return x
 
 
 if __name__ == '__main__':
-    s = input()
-    result = swap_case(s)
+    line = input()
+    result = split_and_join(line)
     print(result)

@@ -63,14 +63,28 @@ regex_pattern = r""  # Do not delete 'r'.
 # You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
 
 
-def split_and_join(line):
-    # write your code here
-    x = line.split(" ")
-    x = "-".join(x)
-    return x
+# def split_and_join(line):
+#     # write your code here
+#     x = line.split(" ")
+#     x = "-".join(x)
+#     return x
+
+
+# if __name__ == '__main__':
+#     line = input()
+#     result = split_and_join(line)
+#     print(result)
+# ==================================
+# You are given the firstname and lastname of a person on two different lines. Your task is to read them and print the following:
+
+Hello firstname lastname! You just delved into python.
+
+
+def print_full_name(a, b):
+    print("Hello {} {}! You just delved into python.".format(first_name, last_name))
 
 
 if __name__ == '__main__':
-    line = input()
-    result = split_and_join(line)
-    print(result)
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)

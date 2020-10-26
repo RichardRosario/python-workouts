@@ -5,7 +5,7 @@
 import numpy as np
 import numpy
 import re
-regex_pattern = r""  # Do not delete 'r'.
+# regex_pattern = r""  # Do not delete 'r'.
 
 # print("\n".join(re.split(regex_pattern, input())))
 # answer: [.,]+
@@ -80,11 +80,26 @@ regex_pattern = r""  # Do not delete 'r'.
 # Hello firstname lastname! You just delved into python.
 
 
-def print_full_name(a, b):
-    print("Hello {} {}! You just delved into python.".format(first_name, last_name))
+# def print_full_name(a, b):
+#     print("Hello {} {}! You just delved into python.".format(first_name, last_name))
+
+
+# if __name__ == '__main__':
+#     first_name = input()
+#     last_name = input()
+#     print_full_name(first_name, last_name)
+
+# ===============================
+# mutations
+# Read a given string, change the character at a given index and then print the modified string.
+
+
+def mutate_string(string, position, character):
+    return string[:position] + character + string[position + 1:]
 
 
 if __name__ == '__main__':
-    first_name = input()
-    last_name = input()
-    print_full_name(first_name, last_name)
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)

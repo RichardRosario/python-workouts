@@ -125,24 +125,36 @@ import re
 # You are given a string S.
 # Your task is to find out if the string  contains: alphanumeric characters, alphabetical characters, digits, lowercase and uppercase characters.
 
-if __name__ == '__main__':
-    S= input()
-    print(any(c.isalnum() for c in S))
-    print(any(c.isalpha() for c in S))
-    print(any(c.isdigit() for c in S))
-    print(any(c.islower() for c in S))
-    print(any(c.isupper() for c in S))
+# if __name__ == '__main__':
+#     S= input()
+#     print(any(c.isalnum() for c in S))
+#     print(any(c.isalpha() for c in S))
+#     print(any(c.isdigit() for c in S))
+#     print(any(c.islower() for c in S))
+#     print(any(c.isupper() for c in S))
 # ===========================================
 # You are given a string S and width w.
 # Your task is to wrap the string into a paragraph of width w.
 
-import textwrap
+# import textwrap
 
-def wrap(string, max_width):
-    result = textwrap.fill(string,max_width) 
-    return result
+# def wrap(string, max_width):
+#     result = textwrap.fill(string,max_width) 
+#     return result
 
-if __name__ == '__main__':
-    string, max_width = input(), int(input())
-    result = wrap(string, max_width)
-    print(result)
+# if __name__ == '__main__':
+#     string, max_width = input(), int(input())
+#     result = wrap(string, max_width)
+#     print(result)
+
+    # =======================================
+    # Design a doormat pattern
+
+
+N, M = map(int, input().split()) 
+for i in range(1,N,2): 
+    print((i*'.|.').center(M,'-'))
+print('WELCOME'.center(M,'-')) 
+
+for i in range(N-2,-1,-2): 
+    print((i*'.|.').center(M, '-'))

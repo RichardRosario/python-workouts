@@ -2,7 +2,6 @@
 
 # Your task is to complete the regex_pattern defined below, which will be used to re.split() all of the, and . symbols in S.
 #
-import numpy as np
 import numpy
 import re
 # regex_pattern = r""  # Do not delete 'r'.
@@ -161,12 +160,38 @@ import re
 
 # ==========================================
 # formating string
-def print_formatted(number):
-    # your code goes here
-    width = len("{0:b}".format(n))
-    for i in range(1,n+1):
-        print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))
+# def print_formatted(number):
+#     # your code goes here
+#     width = len("{0:b}".format(n))
+#     for i in range(1,n+1):
+#         print("{0:{width}d} {0:{width}o} {0:{width}X} {0:{width}b}".format(i, width=width))
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_formatted(n)
+
+# Check for a valid email. Valid email addresses must follow these rules:
+
+# It must have the username@websitename.extension format type.
+# The username can only contain letters, digits, dashes and underscores.
+# The website name can only have letters and digits.
+# The maximum length of the extension is 3.
+
+import re
+def fun(s):
+
+  pattern = re.compile("^[\\w-]+@[0-9a-zA-Z]+\\.[a-z]{1,3}$")
+  return pattern.match(s)
+
+def filter_mail(emails):
+    return list(filter(fun, emails))
 
 if __name__ == '__main__':
     n = int(input())
-    print_formatted(n)
+    emails = []
+    for _ in range(n):
+        emails.append(input())
+
+filtered_emails = filter_mail(emails)
+filtered_emails.sort()
+print(filtered_emails)

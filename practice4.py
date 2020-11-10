@@ -208,4 +208,13 @@ import re
 # All sorted odd digits are ahead of sorted even digits.
 
 
-print(*(sorted(input(), key=lambda x: (x.isdigit(), x.isdigit() and int(x)%2==0, x.isupper(), x.islower(), x))), sep='')
+# print(*(sorted(input(), key=lambda x: (x.isdigit(), x.isdigit() and int(x)%2==0, x.isupper(), x.islower(), x))), sep='')
+
+# ===========================================================
+# You are given a polynomial P of a single indeterminate (or variable), x.
+# You are also given the values of x and k. Your task is to verify if P(x) = k.
+ui = input().split()
+x = int(ui[0])
+print(eval(input()) == int(ui[1]))
+# eval
+eval(input()) 

@@ -213,8 +213,26 @@ import re
 # ===========================================================
 # You are given a polynomial P of a single indeterminate (or variable), x.
 # You are also given the values of x and k. Your task is to verify if P(x) = k.
-ui = input().split()
-x = int(ui[0])
-print(eval(input()) == int(ui[1]))
-# eval
-eval(input()) 
+# ui = input().split()
+# x = int(ui[0])
+# print(eval(input()) == int(ui[1]))
+# # eval
+# eval(input()) 
+
+# -===============================================
+# You are given a spreadsheet that contains a list of N athletes and their details (such as age, height, weight and so on). You are required to sort the data based on the Kth attribute and print the final resulting table. 
+
+import math
+import os
+import random
+import re
+import sys
+
+
+if __name__ == '__main__':
+    N, M = map(int, input().split())
+    j = [[int(x) for x in input().split()] for i in range(N)]
+    k = int(input())
+    j.sort(key=lambda row: row[k])
+    for m in j:
+        print(*m)

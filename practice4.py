@@ -222,17 +222,22 @@ import re
 # -===============================================
 # You are given a spreadsheet that contains a list of N athletes and their details (such as age, height, weight and so on). You are required to sort the data based on the Kth attribute and print the final resulting table. 
 
-import math
-import os
-import random
-import re
-import sys
+# import math
+# import os
+# import random
+# import re
+# import sys
 
 
-if __name__ == '__main__':
-    N, M = map(int, input().split())
-    j = [[int(x) for x in input().split()] for i in range(N)]
-    k = int(input())
-    j.sort(key=lambda row: row[k])
-    for m in j:
-        print(*m)
+# if __name__ == '__main__':
+#     N, M = map(int, input().split())
+#     j = [[int(x) for x in input().split()] for i in range(N)]
+#     k = int(input())
+#     j.sort(key=lambda row: row[k])
+#     for m in j:
+#         print(*m)
+
+# ====================================================
+# You are given a space separated list of integers. If all the integers are positive, then you need to check if any integer is a palindromic integer.
+_, values = input(), input().split()
+print(any([i==i[::-1] for i in values if all(["-" not in n for n in values])]))
